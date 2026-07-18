@@ -13,16 +13,17 @@ public class db_settings {
 
             Class.forName("org.postgresql.Driver");
 
-            con = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:5432/gelis_db",
-                    "postgres",
-                    "1998");
+            String url = System.getenv("SPRING_DATASOURCE_URL");
+            String username = System.getenv("SPRING_DATASOURCE_USERNAME");
+            String password = System.getenv("SPRING_DATASOURCE_PASSWORD");
+
+            con = DriverManager.getConnection(url, username, password);
 
             System.out.println("Database Connected Successfully!");
 
         } catch (Exception ex) {
 
-            System.out.println(ex.getMessage());
+            ex.printStackTrace();
 
         }
 
