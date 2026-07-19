@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import epmaapi.models.tasks_model;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://your-vercel-app.vercel.app"
+})
 public class TaskController {
 
     @GetMapping("/tasks/{userId}")
