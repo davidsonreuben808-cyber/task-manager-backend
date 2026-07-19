@@ -16,7 +16,7 @@ import epmaapi.models.tasks_model;
 @RestController
 @CrossOrigin(origins = {
     "http://localhost:3000",
-    "https://your-vercel-app.vercel.app"
+    "https://task-manager-frontend-eight-rho.vercel.app"
 })
 public class TaskController {
 
