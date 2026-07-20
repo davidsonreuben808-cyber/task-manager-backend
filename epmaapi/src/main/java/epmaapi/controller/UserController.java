@@ -6,7 +6,10 @@ import epmaapi.models.users_model;
 import java.util.Map;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = {
+    "http://localhost:3000",
+    "https://task-manager-frontend-eight-rho.vercel.app"
+})
 public class UserController {
 
     @PostMapping("/register")
